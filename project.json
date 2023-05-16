@@ -1,0 +1,8 @@
+{
+  "slug": "ndjson-event-reader",
+  "title": "NDJSON Event Reader",
+  "description": "Process bounded event lines while isolating malformed records.",
+  "category": "backend",
+  "demo_args": [],
+  "expected_exit": 0
+}
