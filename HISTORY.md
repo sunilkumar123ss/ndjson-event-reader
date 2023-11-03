@@ -4,7 +4,7 @@ This reference implementation and all of the following milestone commits were pr
 
 **Every recorded author and committer date in this timeline is synthetic. These dates are not evidence that the code was written, tested, deployed, or used professionally in the past.**
 
-This snapshot is milestone 2 of 19. It is an incomplete tutorial stage; source, fixtures, tests, the CLI, and automation are introduced progressively.
+This snapshot is milestone 3 of 19. It is an incomplete tutorial stage; source, fixtures, tests, the CLI, and automation are introduced progressively.
 
 The progression decomposes already-completed October 2026 code into meaningful additions. It is not recovered original development history. Publication time is separate from the synthetic Git timestamps.
 
@@ -14,7 +14,7 @@ The progression decomposes already-completed October 2026 code into meaningful a
 | --- | --- | --- |
 | 1 | 2023-05-16T13:24:15+05:30 | add repository metadata and Python ignore rules (present) |
 | 2 | 2023-07-05T19:04:47+05:30 | add module imports, constants, and scope documentation (present) |
-| 3 | 2023-11-03T13:47:56+05:30 | define line-numbered event results (later stage) |
+| 3 | 2023-11-03T13:47:56+05:30 | define line-numbered event results (present) |
 | 4 | 2024-02-24T09:06:41+05:30 | reject duplicate keys and non-finite nested JSON values (later stage) |
 | 5 | 2024-03-12T10:59:13+05:30 | read bounded binary lines and isolate malformed events (later stage) |
 | 6 | 2024-08-17T18:27:57+05:30 | add synthetic stream fixtures with valid and invalid records (later stage) |

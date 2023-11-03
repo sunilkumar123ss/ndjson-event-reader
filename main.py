@@ -6,3 +6,8 @@ from pathlib import Path
 import sys
 
 
+@dataclass(frozen=True)
+class EventResult:
+    line_number: int
+    event: object
+    error: object
