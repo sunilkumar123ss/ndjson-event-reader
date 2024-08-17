@@ -1,0 +1,5 @@
+{"event_id":"synthetic-001","type":"order.created","timestamp":100,"payload":{"quantity":2}}
+
+{"event_id":"synthetic-002","type":"order.updated","timestamp":true,"payload":{}}
+this is not JSON
+{"event_id":"synthetic-003","type":"order.shipped","timestamp":105,"payload":{"carrier":"demo"}}
