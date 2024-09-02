@@ -74,3 +74,24 @@ def read_events(stream, max_line_bytes=8192, skip_blank=True):
             yield EventResult(line_number, None, "{}: {}".format(type(exc).__name__, str(exc)))
             continue
         yield EventResult(line_number, event, None)
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--file", type=Path, default=Path(__file__).resolve().parent / "sample.ndjson")
+    parser.add_argument("--max-line-bytes", type=int, default=8192)
+    parser.add_argument("--strict", action="store_true", help="exit 1 if any event line is invalid")
+    args = parser.parse_args()
+    invalid = 0
+    try:
+        with args.file.open("rb") as stream:
+            for result in read_events(stream, args.max_line_bytes):
+                invalid += result.error is not None
+                print(json.dumps({"line": result.line_number, "event": result.event, "error": result.error}))
+    except (OSError, ValueError) as exc:
+        parser.error(str(exc))
+    return 1 if args.strict and invalid else 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())
