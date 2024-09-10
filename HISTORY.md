@@ -4,7 +4,7 @@ This reference implementation and all of the following milestone commits were pr
 
 **Every recorded author and committer date in this timeline is synthetic. These dates are not evidence that the code was written, tested, deployed, or used professionally in the past.**
 
-This snapshot is milestone 7 of 19. It is an incomplete tutorial stage; source, fixtures, tests, the CLI, and automation are introduced progressively.
+This snapshot is milestone 8 of 19. It is an incomplete tutorial stage; source, fixtures, tests, the CLI, and automation are introduced progressively.
 
 The progression decomposes already-completed October 2026 code into meaningful additions. It is not recovered original development history. Publication time is separate from the synthetic Git timestamps.
 
@@ -19,7 +19,7 @@ The progression decomposes already-completed October 2026 code into meaningful a
 | 5 | 2024-03-12T10:59:13+05:30 | read bounded binary lines and isolate malformed events (present) |
 | 6 | 2024-08-17T18:27:57+05:30 | add synthetic stream fixtures with valid and invalid records (present) |
 | 7 | 2024-09-02T09:29:53+05:30 | add the deterministic demonstration and command-line entry point (present) |
-| 8 | 2024-09-10T12:17:32+05:30 | test valid final line without newline (later stage) |
+| 8 | 2024-09-10T12:17:32+05:30 | test valid final line without newline (present) |
 | 9 | 2024-11-05T10:30:48+05:30 | test bad line does not abort good line (later stage) |
 | 10 | 2024-12-29T14:46:26+05:30 | test blank lines preserve physical line numbers (later stage) |
 | 11 | 2025-01-30T16:13:00+05:30 | test oversized line drains and recovers (later stage) |
