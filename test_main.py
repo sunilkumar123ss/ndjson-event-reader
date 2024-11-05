@@ -19,6 +19,11 @@ class NDJSONTests(unittest.TestCase):
         self.assertIsNone(results[0].error)
         self.assertEqual(results[0].event['event_id'], 'demo-1')
 
+    def test_bad_line_does_not_abort_good_line(self):
+        results = self.read(b'not-json\n' + event() + b'\n')
+        self.assertIsNotNone(results[0].error)
+        self.assertIsNone(results[1].error)
+        self.assertEqual(results[1].line_number, 2)
 
 
 
