@@ -25,6 +25,10 @@ class NDJSONTests(unittest.TestCase):
         self.assertIsNone(results[1].error)
         self.assertEqual(results[1].line_number, 2)
 
+    def test_blank_lines_preserve_physical_line_numbers(self):
+        results = self.read(b'\n  \n' + event())
+        self.assertEqual(results[0].line_number, 3)
+        self.assertIsNotNone(self.read(b'\n', skip_blank=False)[0].error)
 
 
 
