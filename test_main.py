@@ -30,6 +30,12 @@ class NDJSONTests(unittest.TestCase):
         self.assertEqual(results[0].line_number, 3)
         self.assertIsNotNone(self.read(b'\n', skip_blank=False)[0].error)
 
+    def test_oversized_line_drains_and_recovers(self):
+        results = self.read(b'x' * 300 + b'\n' + event(), max_line_bytes=100)
+        self.assertEqual(len(results), 2)
+        self.assertIn('exceeds', results[0].error)
+        self.assertIsNone(results[1].error)
+        self.assertEqual(results[1].line_number, 2)
 
 
 
