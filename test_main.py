@@ -37,6 +37,10 @@ class NDJSONTests(unittest.TestCase):
         self.assertIsNone(results[1].error)
         self.assertEqual(results[1].line_number, 2)
 
+    def test_byte_limit_includes_newline(self):
+        raw = event()
+        self.assertIsNone(self.read(raw, max_line_bytes=len(raw))[0].error)
+        self.assertIsNotNone(self.read(raw + b'\n', max_line_bytes=len(raw))[0].error)
 
 
 
