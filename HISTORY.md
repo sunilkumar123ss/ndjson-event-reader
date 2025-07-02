@@ -4,7 +4,7 @@ This reference implementation and all of the following milestone commits were pr
 
 **Every recorded author and committer date in this timeline is synthetic. These dates are not evidence that the code was written, tested, deployed, or used professionally in the past.**
 
-This snapshot is milestone 12 of 19. It is an incomplete tutorial stage; source, fixtures, tests, the CLI, and automation are introduced progressively.
+This snapshot is milestone 13 of 19. It is an incomplete tutorial stage; source, fixtures, tests, the CLI, and automation are introduced progressively.
 
 The progression decomposes already-completed October 2026 code into meaningful additions. It is not recovered original development history. Publication time is separate from the synthetic Git timestamps.
 
@@ -24,7 +24,7 @@ The progression decomposes already-completed October 2026 code into meaningful a
 | 10 | 2024-12-29T14:46:26+05:30 | test blank lines preserve physical line numbers (present) |
 | 11 | 2025-01-30T16:13:00+05:30 | test oversized line drains and recovers (present) |
 | 12 | 2025-03-12T17:29:02+05:30 | test byte limit includes newline (present) |
-| 13 | 2025-07-02T18:01:56+05:30 | test invalid utf8 duplicate keys and nonfinite numbers (later stage) |
+| 13 | 2025-07-02T18:01:56+05:30 | test invalid utf8 duplicate keys and nonfinite numbers (present) |
 | 14 | 2025-07-13T14:59:31+05:30 | test event schema (later stage) |
 | 15 | 2025-12-18T16:05:54+05:30 | test requires binary stream and positive limit (later stage) |
 | 16 | 2026-01-22T17:13:54+05:30 | add isolated tests, demo, and help verification (later stage) |

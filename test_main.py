@@ -42,6 +42,10 @@ class NDJSONTests(unittest.TestCase):
         self.assertIsNone(self.read(raw, max_line_bytes=len(raw))[0].error)
         self.assertIsNotNone(self.read(raw + b'\n', max_line_bytes=len(raw))[0].error)
 
+    def test_invalid_utf8_duplicate_keys_and_nonfinite_numbers(self):
+        for data in (b'\xff\n', b'{"a":1,"a":2}\n', event(payload={"x": float('nan')}),
+                     event().replace(b'"payload":{}', b'"payload":{"x":1e999}')):
+            with self.subTest(data=data): self.assertIsNotNone(self.read(data)[0].error)
 
 
 
