@@ -47,6 +47,9 @@ class NDJSONTests(unittest.TestCase):
                      event().replace(b'"payload":{}', b'"payload":{"x":1e999}')):
             with self.subTest(data=data): self.assertIsNotNone(self.read(data)[0].error)
 
+    def test_event_schema(self):
+        for data in (b'[]', event(timestamp=True), event(timestamp=-1), event(payload=[]), event(type=' ')):
+            with self.subTest(data=data): self.assertIsNotNone(self.read(data)[0].error)
 
 
 
