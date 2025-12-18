@@ -51,6 +51,9 @@ class NDJSONTests(unittest.TestCase):
         for data in (b'[]', event(timestamp=True), event(timestamp=-1), event(payload=[]), event(type=' ')):
             with self.subTest(data=data): self.assertIsNotNone(self.read(data)[0].error)
 
+    def test_requires_binary_stream_and_positive_limit(self):
+        with self.assertRaises(TypeError): list(read_events(io.StringIO('{}')))
+        with self.assertRaises(ValueError): self.read(event(), max_line_bytes=0)
 
 
 if __name__ == '__main__':

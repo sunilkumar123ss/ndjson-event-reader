@@ -4,7 +4,7 @@ This reference implementation and all of the following milestone commits were pr
 
 **Every recorded author and committer date in this timeline is synthetic. These dates are not evidence that the code was written, tested, deployed, or used professionally in the past.**
 
-This snapshot is milestone 14 of 19. It is an incomplete tutorial stage; source, fixtures, tests, the CLI, and automation are introduced progressively.
+This snapshot is milestone 15 of 19. It is an incomplete tutorial stage; source, fixtures, tests, the CLI, and automation are introduced progressively.
 
 The progression decomposes already-completed October 2026 code into meaningful additions. It is not recovered original development history. Publication time is separate from the synthetic Git timestamps.
 
@@ -26,7 +26,7 @@ The progression decomposes already-completed October 2026 code into meaningful a
 | 12 | 2025-03-12T17:29:02+05:30 | test byte limit includes newline (present) |
 | 13 | 2025-07-02T18:01:56+05:30 | test invalid utf8 duplicate keys and nonfinite numbers (present) |
 | 14 | 2025-07-13T14:59:31+05:30 | test event schema (present) |
-| 15 | 2025-12-18T16:05:54+05:30 | test requires binary stream and positive limit (later stage) |
+| 15 | 2025-12-18T16:05:54+05:30 | test requires binary stream and positive limit (present) |
 | 16 | 2026-01-22T17:13:54+05:30 | add isolated tests, demo, and help verification (later stage) |
 | 17 | 2026-03-08T19:37:01+05:30 | add the hosted Python verification workflow (later stage) |
 | 18 | 2026-04-06T12:11:51+05:30 | record the completed local verification and its limits (later stage) |
